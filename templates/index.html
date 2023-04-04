@@ -4,10 +4,12 @@
     <title>Homework 2</title>
     <style>
       body {
-        font-family: Helvetica;
+        vertical-align: middle;
+        text-align: center;
       }
       * {
         box-sizing: border-box;
+        text-align: center
       }
 
       input[type="text"],
@@ -20,6 +22,7 @@
         box-sizing: border-box;
         margin-top: 6px;
         margin-bottom: 16px;
+        text-align: center;
         resize: vertical;
       }
 
@@ -47,7 +50,7 @@
   </head>
   <body>
     <p>&nbsp;</p>
-    <h1>Hello, Welcome to Python Finance Info (Stock Details Fetcher)</h1>
+    <h1>CMPE 285 HW 2</h1>
     <h4>{{msg}}</h4>
 
     <form action="/" method="POST">
@@ -60,8 +63,38 @@
         </tbody>
       </table>
 
-      <input type="submit" value="Calculate" /> <input type="reset" />
+      <input type="submit" value="Calculate" />
     </form>
     <p>&nbsp;</p>
+    <h1>Stock Details:</h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>Date and Time:</td>
+          <td>{{dateTimeNow}}</td>
+        </tr>
+
+        <tr>
+          <td>Company Name:</td>
+          <td>{{NameofStock}}</td>
+        </tr>
+
+        <tr>
+          <td>Stock Price:</td>
+          <td>{{price}}</td>
+        </tr>
+
+        <tr>
+          <td>Value Change:</td>
+          <td>{{valueChange}}</td>
+        </tr>
+
+        <tr>
+          <td>Percentage Change:</td>
+          <td>{{perChange}} %</td>
+        </tr>
+      </tbody>
+    </table>
+    <br /><br />
   </body>
 </html>

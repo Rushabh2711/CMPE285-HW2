@@ -30,7 +30,7 @@ def index():
             valueChange = result_data[0]["change"]
             perChange = result_data[0]["changesPercentage"]
             ResData = {'dateTimeNow': dateTimeNow, 'NameofStock': NameofStock, 'price': price, 'valueChange' : valueChange, 'perChange': perChange }
-            return render_template('output.html', **ResData)
+            return render_template('index.html', **ResData)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
